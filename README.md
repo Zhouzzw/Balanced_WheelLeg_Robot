@@ -1,6 +1,6 @@
 # Balanced_WheelLeg_Robot
 
-> RoboMaster 比赛中**串联腿构型轮腿机器人**的底盘控制代码。
+> **串联腿构型轮腿机器人**的底盘控制代码。
 
 [![MCU](https://img.shields.io/badge/MCU-STM32G474VETx-blue)](https://www.st.com/en/microcontrollers-microprocessors/stm32g474ve.html)
 [![Core](https://img.shields.io/badge/Core-Cortex--M4F-00945E)](https://developer.arm.com/Processors/Cortex-M4)
