@@ -1,4 +1,4 @@
-# RM-WheelLeg
+# Balanced_WheelLeg_Robot
 
 > RoboMaster 比赛中**串联腿构型轮腿机器人**的底盘控制代码。
 
