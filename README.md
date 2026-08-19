@@ -1,12 +1,6 @@
 # Balanced_WheelLeg_Robot
 
-> **串联腿构型轮腿机器人**的底盘控制代码。
-
-[![MCU](https://img.shields.io/badge/MCU-STM32G474VETx-blue)](https://www.st.com/en/microcontrollers-microprocessors/stm32g474ve.html)
-[![Core](https://img.shields.io/badge/Core-Cortex--M4F-00945E)](https://developer.arm.com/Processors/Cortex-M4)
-[![RTOS](https://img.shields.io/badge/RTOS-FreeRTOS%20V10.3.1-8A2BE2)](https://www.freertos.org/)
-[![IDE](https://img.shields.io/badge/IDE-Keil%20MDK--ARM-orange)](https://www.keil.com/)
-[![Tool](https://img.shields.io/badge/Config-STM32CubeMX-lightgrey)](https://www.st.com/en/development-tools/stm32cubemx.html)
+> **串联腿构型轮腿机器人**的底盘控制代码 采用VMC+LQR控制方案
 
 ---
 
@@ -227,21 +221,13 @@
 
 ---
 
-## 📝 Git 工作流
-
-- **仓库**: [Zhouzzw/RM-WheelLeg](https://github.com/Zhouzzw/RM-WheelLeg)
-- **分支**: `main` (稳定版) ← `develop` (开发版) ← `feature` (功能分支)
-- **提交规范**: `chore` / `feat` / `fix` 前缀 + 中文描述
-- 推荐使用 `--no-ff` 合并以保留分支历史
-
----
-
 ## 🙏 致谢
 
 本项目使用了以下开源代码和参考实现：
 
 | 模块 | 来源 | 作者 |
 |------|------|------|
+| 底盘控制算法方案 | 平衡步兵控制系统开源 | Wang Hongxi |
 | 卡尔曼滤波 / 四元数 EKF / 控制器 | 开源算法库 | Wang Hongxi |
 | 功率限制算法 | 西交利物浦大学 (XJTLU) Maxwell's Demon 开源 | WUST_MURRAY |
 | CRC8/CRC16 校验 | 大疆裁判系统协议 (DJI 2019) | DJI |
