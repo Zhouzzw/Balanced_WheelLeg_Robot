@@ -108,7 +108,7 @@ flowchart TD
 # ③ 查看电机速度 / 电流 / 姿态角等浮点波形
 ```
 
-> 📖 **从零构建 / 软件包依赖 / 真机复现 / 排坑全流程见 [docs/依赖编译指南.md](docs/依赖编译指南.md)**；底盘运控完整数据流 / 参数标定见 `CLAUDE.md`「底盘运控数据流」与「调试标定」节。
+> 📖 **从零构建 / 软件包依赖 / 真机复现 / 排坑全流程见 [docs/依赖编译指南.md](docs/依赖编译指南.md)**；底盘运控完整数据流 / 参数标定见 [docs/PROJECT_DATASHEET.md](docs/PROJECT_DATASHEET.md)。
 
 ---
 
@@ -144,9 +144,9 @@ flowchart TD
 ```text
 Balanced_WheelLeg_Robot/
 ├── Project/
-│   ├── Robot_Application/        # ★ 机器人核心逻辑 ⭐
-│   │   ├── Chassis.c/.h          # ★ 底盘运控：变参数LQR / VMC / 跳跃 / 台阶 / 离地 / 起立 / 氮气弹簧 ⭐
-│   │   ├── RoboControl.c/.h      # ★ 操控→状态调度、功能标志触发、失能/重启 ⭐
+│   ├── Robot_Application/        # 机器人核心逻辑 ⭐
+│   │   ├── Chassis.c/.h          # 底盘运控：变参数LQR / VMC / 跳跃 / 台阶 / 离地 / 起立 / 氮气弹簧 ⭐
+│   │   ├── RoboControl.c/.h      # 操控→状态调度、功能标志触发、失能/重启 ⭐
 │   │   ├── Communicate.c/.h      # 双板通信协议（上行 / 下行 / 遥控帧）
 │   │   ├── Gimbal.c / INS.c      # 云台控制 / 惯导姿态解算
 │   │   ├── Shoot.c / Aim.c       # 发射控制 / 自瞄数据处理（外围支撑）
@@ -155,12 +155,11 @@ Balanced_WheelLeg_Robot/
 │   ├── BSP/                      # BMI088 / DWT / Buzzer / Key / LED / PWM / Flash
 │   ├── Hardware_Drivers/         # Motor_DJI / Unitree / DAMIAO、Remote_Control、Referee_Unpack、SuperCap
 │   ├── Commnuicate_Drivers/      # CAN_FDCAN / USART / USB CDC
-│   └── UI/  UI-backup/  Vision_Old/   # 裁判 UI 绘制 / 旧版视觉（外围）
-├── Core/                         # CubeMX 生成 HAL / FreeRTOS 配置 / 中断
+│   └── UI/  UI-backup/  Vision_Old/      # 裁判 UI 绘制 / 旧版视觉（外围）
+├── Core/                                 # CubeMX 生成 HAL / FreeRTOS 配置 / 中断
 ├── Drivers / Middlewares / USB_Device/   # STM32 HAL + FreeRTOS + USB 官方库
-├── MDK-ARM/Kawashiro_Frame_G474.uvprojx  # ⭐ Keil 工程文件
-├── CLAUDE.md                     # ⭐ 底盘运控静态基线（核心创新 / 数据流 / 标定）
-└── README.md                     # 本文件
+├── MDK-ARM/Kawashiro_Frame_G474.uvprojx  # Keil 工程文件
+└── README.md                             # 本文件
 ```
 
 ---
@@ -226,7 +225,7 @@ Balanced_WheelLeg_Robot/
 | 文档 | 内容 |
 |------|------|
 | [docs/依赖编译指南.md](docs/依赖编译指南.md) | ⭐ **从零构建与部署**：工具链 / 软件包依赖 / 编译烧录 / 真机复现 / 排坑 |
-| [CLAUDE.md](CLAUDE.md) | ⭐ **底盘运控静态基线（单一数据源）**：10 大创新点详解 / 1ms 数据流 / 状态调度 / 通信协议 / 参数标定点 |
+| [docs/PROJECT_DATASHEET.md](docs/PROJECT_DATASHEET.md) | ⭐ **工程数据手册（单一数据源）**：核心配置 / 算法流程 / 量化结果 / 设计决策 / 亮点 / 已知限制 |
 | [README.md](README.md) | 本交付说明：核心功能 / 技术路线 / 快速开始 / 排查 |
 | [LICENSE](LICENSE) | Apache-2.0 许可证 |
 
