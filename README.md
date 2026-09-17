@@ -1,5 +1,7 @@
 # 串联腿构型平衡轮腿机器人
 
+**简体中文** | [English](README.en.md)
+
 [![MCU](https://img.shields.io/badge/MCU-STM32G474VETx-blue)](https://www.st.com/en/microcontrollers-microprocessors/stm32g474ve.html)
 [![C](https://img.shields.io/badge/Language-C-green)]()
 [![控制](https://img.shields.io/badge/Control-LQR%2BVMC-orange)]()
@@ -146,7 +148,8 @@ Balanced_WheelLeg_Robot/
 ├── Core/                                 # CubeMX 生成 HAL / FreeRTOS 配置 / 中断
 ├── Drivers / Middlewares / USB_Device/   # STM32 HAL + FreeRTOS + USB 官方库
 ├── MDK-ARM/Kawashiro_Frame_G474.uvprojx  # Keil 工程文件
-└── README.md                             # 本文件
+├── README.md                             # 中文 README（本文件）
+└── README.en.md                          # English README
 ```
 
 ---
@@ -213,7 +216,8 @@ Balanced_WheelLeg_Robot/
 |------|------|
 | [docs/依赖编译指南.md](docs/依赖编译指南.md) | ⭐ **从零构建与部署**：工具链 / 软件包依赖 / 编译烧录 / 真机复现 / 排坑 |
 | [docs/PROJECT_DATASHEET.md](docs/PROJECT_DATASHEET.md) | ⭐ **工程数据手册（单一数据源）**：核心配置 / 算法流程 / 量化结果 / 设计决策 / 亮点 / 已知限制 |
-| [README.md](README.md) | 本交付说明：核心功能 / 技术路线 / 快速开始 / 排查 |
+| [README.md](README.md) | 本交付说明（简体中文）：核心功能 / 技术路线 / 快速开始 / 排查 |
+| [README.en.md](README.en.md) | 英文版交付说明（English version of this README） |
 | [LICENSE](LICENSE) | Apache-2.0 许可证 |
 
 ---
@@ -227,7 +231,7 @@ Balanced_WheelLeg_Robot/
 | FreeRTOS V10.3.1 | `Middlewares/Third_Party/FreeRTOS` | MIT |
 | STM32G4xx HAL 驱动 + USB 库 | `Drivers/`、`Middlewares/ST` | BSD-3-Clause |
 | CMSIS（核心 + G4 设备） | `Drivers/CMSIS` | Apache-2.0 |
-| 底盘/控制参考实现（Wang Hongxi 等） | 源码借鉴 | 见下文致谢，需保留署名 |
+| 底盘/控制参考实现（Wang Hongxi 等） | 控制系统设计参考 | 见下文致谢 |
 
 > ⚠ `arm_math.h`（CMSIS-DSP）不随仓库分发，编译前须在 Keil 包管理器安装 `ARM.CMSIS-DSP` —— 详见 [docs/依赖编译指南.md](docs/依赖编译指南.md)。
 > 开源只覆盖本项目自研代码；参考第三方方案（如平衡步兵底盘控制）的署名与用途在**致谢**中列出，遵守各自原始许可。
@@ -245,5 +249,3 @@ Balanced_WheelLeg_Robot/
 - [Bosch BMI088](https://www.bosch-sensortec.com/) — 六轴 IMU 驱动适配
 
 ---
-
-> 本仓库代码与文档基于 **Apache-2.0** 开源（见 [LICENSE](LICENSE)）；第三方库与模型版权归其各自所有者。
